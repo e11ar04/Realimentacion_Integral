@@ -11,7 +11,7 @@ plantaMIMO = ss(A,B,C,0);
 % Matrices para REI con LQR
 Q = diag([200 150 100 200 50 50]);
 R = eye(2);
-% Llamada a la función creada
+% Llamada a la funciÃ³n creada
 [K,Ki] = rei_lqr(A,B,C,D,Q,R);
 % Quite el % para activar
 % la forma alterna de rei_lqr.m
@@ -52,8 +52,8 @@ if controlabilidad == m_a + n_b %%La condicion nombrada menciona que un sistema 
     B_s = [B;zeros(m_c,n_b)]; %Creacion de matriz aumentada B
     K_s = lqr(A_s,B_s,Q,R); % Creacion de matriz K aumentada ------------Ultima columna es k
                       % Columnas de k1 a ki componene matriz K
-    Ki = K_s(1:m_c,m_q); %Matriz columna Ki
-    K =  K_s(1:m_c,1:m_q-1); %Matriz K normal
+    Ki = -1*K_s(1:m_c,m_a+1:m_q); %Matriz columna Ki
+    K =  K_s(1:m_c,1:m_q-m_c); %Matriz K normal
     disp("Matriz Ki")
     disp(Ki);
     disp("Matriz K")
