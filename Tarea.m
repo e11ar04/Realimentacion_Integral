@@ -11,8 +11,7 @@ plantaMIMO = ss(A,B,C,0);
 % Matrices para REI con LQR
 Q = diag([200 150 100 200 50 50]);
 R = eye(2);
-% Llamada a la funci?n creada
+% Llamada a la funcion creada
 [K1,Ki1] = rei_lqr(A,B,C,D,Q,R)
-% Quite el % para activar
 % la forma alterna de rei_lqr.m
 [K2,Ki2] = rei_lqr(plantaMIMO,Q,R)
