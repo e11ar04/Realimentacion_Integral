@@ -20,7 +20,7 @@ else
         R=C;
         A=plantaMIMO(1, 1).a;
         B=[plantaMIMO(1, 1).b plantaMIMO(1, 2).b];
-        C=plantaMIMO(1, 1).c;
+        C=[plantaMIMO(1, 1).c;plantaMIMO(2, 1).c];
         D=plantaMIMO(1, 1).d;
         
     end
@@ -41,7 +41,7 @@ else
      end
      controlabilidad = det(M);
      if controlabilidad ~= 0
-            X = 'El sistema es completamene controlable';
+            X = 'El sistema es completamente controlable';
             disp(X)
 
             %Calculo de K y Ki

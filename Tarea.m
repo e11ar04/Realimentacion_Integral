@@ -12,7 +12,7 @@ plantaMIMO = ss(A,B,C,0);
 Q = diag([200 150 100 200 50 50]);
 R = eye(2);
 % Llamada a la funci?n creada
-[K,Ki] = rei_lqr(A,B,C,D,Q,R);
+[K1,Ki1] = rei_lqr(A,B,C,D,Q,R)
 % Quite el % para activar
 % la forma alterna de rei_lqr.m
-%[K,Ki] = rei_lqr(plantaMIMO,Q,R)
+[K2,Ki2] = rei_lqr(plantaMIMO,Q,R)
